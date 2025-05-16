@@ -1,0 +1,17 @@
+Clasa Student
+UN student poate sa se inscrie 1 data sau de mai multe ori
+Acesta are atributele nume,adresa,nrTelefon,email,IDstudent,mediaNotelor
+Are operatorul esteEligibilInscriere() care este vizibil public
+getSeminariiAlese() este un getter vizibil public
+1 inscriere este asignata unui student
+
+Clasa Inscriere
+Are un singur atribut si anume notePrimite si 2 getteri getMediaLaZi() si getNotaFinala() care sunt vizibile public
+
+Clasa Seminar 
+Acesta poate sa fie 0 sau mai multe si sa aiba 0 sau mai multe obiecte de tip Student pe lista de asteptare.
+Are atributele nume, Idseminar,taxe si operatorii addStudent() si dropStudent() vizibil public
+Seminarele pot predate de 0 sau 1 profesor( este posibil ca seminarul sa nu aiba instructor)
+
+Clasa Profesor
+Are atributele nume, adresa, nrTelefon, email, salar si acesta poate sa predea 0 sau mai multe Seminare

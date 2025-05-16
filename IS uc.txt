@@ -1,0 +1,56 @@
+a)NUME: Imprumut carte
+
+Scurta Descriere: Clientul poate sa imprumutam o carte
+
+Preconditii: Sa fie membru al bibleotecii(autenticifat)
+Postconditii: Sa nu depaseasca limita de imprumut. Cartea este disponibila.
+
+Situatii de eroare: Autentificare esuata. Depasire limita imprumut. Baza de date indisponibila.
+
+Stare sistem in caz de erori:
+Clientul nu ii este imprumutata cartea 
+
+Actori: Clietul, Baza de Date
+
+Declansator: Clientul vrea sa imprumute o carte
+
+Proces standard:
+1. Auth
+2. Clientul trimite cerere de imprumut
+3. Verifica limitaimprumutului
+4. Se aproba cererea
+
+Proces alternativ:
+1. Esec Auth
+2. esec imprumut(lim depasita)
+
+
+
+
+b)
+Nume: extindere imprumut
+
+Scurta Descriere: Clientul exttinde imprumutul unei carti
+
+Preconditii: Clientul trebuie sa apartina bilbelotecii si sa fi imprumutata o carte
+Postconditii:Clientul are cartea imprumutata
+
+Situatii de eroare: Autentificare esuata. Baza de date indisponibila.
+
+Stare sistem in caz de erori:
+Clientul nu poate sa extinda imprumutul unei carti 
+
+Actori: Clientul, Baza de Date
+
+Declansator: Clientul vrea sa extinda un imprumut a unei carti
+
+Proces standard:
+1. Auth
+2. Clientul trimite cerere de rxtindere imprumut
+3. Verifica daca are cartea imprumutata
+4. Se aproba cererea
+
+
+Proces alternativ:
+1. Esec Auth
+2. esec extindere(nu are cartea imrpumutata)

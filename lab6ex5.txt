@@ -1,0 +1,123 @@
+public class Pachet {
+    private String origine;
+    private String destinatie;
+    private String continutM;
+
+    public Pachet(String origine, String destinatie, String continutM) {
+        this.origine = origine;
+        this.destinatie = destinatie;
+        this.continutM = continutM;
+    }
+
+    public String getOrigine() {
+        return origine;
+    }
+
+    public String getDestinatie() {
+        return destinatie;
+    }
+
+    public String getContinutM() {
+        return continutM;
+    }
+}
+
+
+
+
+
+
+
+public abstract class Nod {
+    protected String nume;
+    protected Nod referinta;
+
+    public Nod(String nume) {
+        this.nume = nume;
+    }
+
+    public void setReferinta(Nod referinta) {
+        this.referinta = referinta;
+    }
+
+    public Nod getReferinta() {
+        return referinta;
+    }
+
+    public String getNume() {
+        return nume;
+    }
+
+    public abstract void proceseazaPachet(Pachet p);
+}
+
+
+
+public class Server extends Nod {
+
+    public Server(String nume) {
+        super(nume);
+    }
+
+    @Override
+    public void proceseazaPachet(Pachet p) {
+        System.out.println("Serverul " + nume + " procesează pachetul: " + p.getContinutM());
+    }
+}
+
+
+
+
+
+public abstract class Imprimanta extends Nod {
+
+    public Imprimanta(String nume) {
+        super(nume);
+    }
+
+    public abstract void tipareste(String continut);
+
+    @Override
+    public void proceseazaPachet(Pachet p) {
+        tipareste(p.getContinutM());
+    }
+}
+
+
+
+
+
+
+public class ImprimantaAscii extends Imprimanta {
+
+    public ImprimantaAscii(String nume) {
+        super(nume);
+    }
+
+    @Override
+    public void tipareste(String continut) {
+        System.out.println("Imprimanta ASCII " + nume + " tipărește: " + continut);
+    }
+}
+
+
+
+
+
+
+
+public class ImprimantaPostscript extends Imprimanta {
+
+    public ImprimantaPostscript(String nume) {
+        super(nume);
+    }
+
+    @Override
+    public void tipareste(String continut) {
+        System.out.println("Imprimanta PostScript " + nume + " tipărește: " + continut);
+    }
+}
+
+
+
+

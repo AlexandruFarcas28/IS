@@ -1,0 +1,181 @@
+public class Main {
+    public static void main(String[] args) {
+        Companie c = new Companie();
+        c.setNume("Exemplu SRL");
+        c.setLoc("Cluj");
+
+        Departamente d = new Departamente();
+        d.setNume("HR");
+        d.setNr(1);
+
+        Angajati a = new Angajati();
+        a.setRol("Recrutor");
+        a.setDepart("HR");
+        a.setSalar(4500);
+
+        Manager m = new Manager();
+        m.setNume("Ana Ionescu");
+        m.setCNP("2910401123456");
+
+        Birou b = new Birou();
+        b.setSediu("Etaj 3");
+
+        System.out.println("Compania: " + c.getNume());
+        System.out.println("Departament: " + d.getNume());
+        System.out.println("Angajat: " + a.getRol() + " - " + a.getSalar() + " RON");
+        System.out.println("Manager: " + m.getNume());
+        System.out.println("Birou: " + b.getSediu());
+    }
+}
+
+
+
+
+
+
+
+
+
+
+public class Companie {
+    private String nume;
+    private String locatie;
+
+    public String getNume() {
+        return nume;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public String getLoc() {
+        return locatie;
+    }
+
+    public void setLoc(String locatie) {
+        this.locatie = locatie;
+    }
+}
+
+
+
+
+
+
+
+
+
+public class Angajati {
+    private String rol;
+    private String departament;
+    private double salar;
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
+
+    public String getDepart() {
+        return departament;
+    }
+
+    public void setDepart(String departament) {
+        this.departament = departament;
+    }
+
+    public double getSalar() {
+        return salar;
+    }
+
+    public void setSalar(double salar) {
+        this.salar = salar;
+    }
+}
+
+
+
+
+
+
+
+
+
+public class Birou {
+    private String esteSediu;
+
+    public String getSediu() {
+        return esteSediu;
+    }
+
+    public void setSediu(String esteSediu) {
+        this.esteSediu = esteSediu;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+public class Manager {
+    private String nume;
+    private String CNP;
+
+    public String getNume() {
+        return nume;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public String getCNP() {
+        return CNP;
+    }
+
+    public void setCNP(String CNP) {
+        this.CNP = CNP;
+    }
+}
+
+
+
+
+
+
+
+
+import java.util.List;
+
+public class Departamente {
+    private String numeDep;
+    private int nrBirouri;
+    private List<Birou> birouri;
+    private List<Angajati> angajati;
+
+    public String getNume() {
+        return numeDep;
+    }
+
+    public void setNume(String numeDep) {
+        this.numeDep = numeDep;
+    }
+
+    public int getNr() {
+        return nrBirouri;
+    }
+
+    public void setNr(int nrBirouri) {
+        this.nrBirouri = nrBirouri;
+    }
+}
+

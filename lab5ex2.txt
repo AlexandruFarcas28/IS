@@ -1,0 +1,217 @@
+package lab5;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class Carte {
+
+    private String editor;
+    private Date dataPublicare;
+    private String ISBN;
+    private List<Parti> parti;
+
+    public Carte(String editor, Date dataPublicare, String iSBN) {
+        this.editor = editor;
+        this.dataPublicare = dataPublicare;
+        this.ISBN = iSBN;
+        this.parti = new ArrayList<>();
+    }
+
+    public void adaugaParte(Parti parte) {
+        parti.add(parte);
+    }
+
+    public List<Parti> getParti() {
+        return parti;
+    }
+
+    public String getEditor() {
+        return editor;
+    }
+
+    public void setEditor(String editor) {
+        this.editor = editor;
+    }
+
+    public Date getDataPublicare() {
+        return dataPublicare;
+    }
+
+    public void setDataPublicare(Date dataPublicare) {
+        this.dataPublicare = dataPublicare;
+    }
+
+    public String getISBN() {
+        return ISBN;
+    }
+
+    public void setISBN(String iSBN) {
+        this.ISBN = iSBN;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package lab5;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Capitol extends Superclasa {
+
+    private String rezumat;
+    private List<Sectiuni> sectiuni;
+
+    public Capitol(String titlu, int nr, String rezumat) {
+        super(titlu, nr);
+        this.rezumat = rezumat;
+        this.sectiuni = new ArrayList<>();
+    }
+
+    public void adaugaSectiune(Sectiuni s) {
+        sectiuni.add(s);
+    }
+
+    public List<Sectiuni> getSectiuni() {
+        return sectiuni;
+    }
+
+    public String getRezumat() {
+        return rezumat;
+    }
+
+    public void setRezumat(String rezumat) {
+        this.rezumat = rezumat;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package lab5;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Parti extends Superclasa {
+
+    private List<Capitol> capitole;
+
+    public Parti(String titlu, int nr) {
+        super(titlu, nr);
+        this.capitole = new ArrayList<>();
+    }
+
+    public void adaugaCapitol(Capitol c) {
+        capitole.add(c);
+    }
+
+    public List<Capitol> getCapitole() {
+        return capitole;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package lab5;
+
+public class Sectiuni extends Superclasa {
+
+    public Sectiuni(String titlu, int nr) {
+        super(titlu, nr);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package lab5;
+
+public class Superclasa {
+    
+    private String titlu;
+    private int nr;
+
+    public Superclasa(String titlu, int nr) {
+        this.titlu = titlu;
+        this.nr = nr;
+    }
+
+    public String getTitlu() {
+        return titlu;
+    }
+
+    public void setTitlu(String titlu) {
+        this.titlu = titlu;
+    }
+
+    public int getNr() {
+        return nr;
+    }
+
+    public void setNr(int nr) {
+        this.nr = nr;
+    }
+}
+
+
+

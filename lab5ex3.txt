@@ -1,0 +1,129 @@
+package lab5ex3;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Copii extends Persoana {
+    private String certNastere;
+    private List<Parinti> parinti = new ArrayList<>();
+
+    public String getCertNastere() {
+        return certNastere;
+    }
+
+    public void setCertNastere(String certNastere) {
+        this.certNastere = certNastere;
+    }
+
+    public List<Parinti> getParinti() {
+        return parinti;
+    }
+
+    public void adaugaParinte(Parinti parinte) {
+        parinti.add(parinte);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package lab5ex3;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Parinti extends Persoana {
+    private String CI;
+    private List<Copii> copii = new ArrayList<>();
+
+    public String getCI() {
+        return CI;
+    }
+
+    public void setCI(String CI) {
+        this.CI = CI;
+    }
+
+    public List<Copii> getCopii() {
+        return copii;
+    }
+
+    public void adaugaCopil(Copii copil) {
+        copii.add(copil);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package lab5ex3;
+
+public class Persoana {
+    private String nume;
+    private String prenume;
+    private String cnp;
+
+    public String getNume() {
+        return nume;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public String getPrenume() {
+        return prenume;
+    }
+
+    public void setPrenume(String prenume) {
+        this.prenume = prenume;
+    }
+
+    public String getCnp() {
+        return cnp;
+    }
+
+    public void setCnp(String cnp) {
+        this.cnp = cnp;
+    }
+}
+
+
+
+
+

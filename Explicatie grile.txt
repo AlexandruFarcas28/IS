@@ -1,0 +1,85 @@
+E1
+
+a)Produs este interfata nu superclasa
+b)Produs este interfata nu superclasa, este realizare intre Carte si Produs
+c)Produs nu este clasa e interfata
+e)Carte nu implementeaza interfata Produs
+
+E2
+
+a)Revista nu extinde produs
+b)Clasa Produs nu implementeaza revista, produs e interfata 
+d)getPret() nu are implementata metoda
+e)Nu are implementata metoda
+g)nu am tipul pentru metoda
+
+E3
+
+b)tipul trebuie sepcificat iainte de nume( int grade)
+d)Date nu trebuie sa fie public e privat
+e)Nu are un tip de return
+f)Nu e extindere
+h)Trebuie sa fie lista
+
+E4
+
+a)Mostenierea se face invers
+c)Trebuia sa fie private
+e)AdaugaProiect este publica 
+
+E5
+
+a)Profesor nu exdtinde materie
+c)Este asociere unidirectionala
+d)Relatia nu este agregare
+
+E6
+
+b)Este unidirectionala
+c)Nu este mostenire relatia
+
+E7
+
+a)Relatia nu este de mostenire
+b)Relatia nu este de mostenire
+d)Trebuie sa fie colectie initializata
+e)Clasa Laborator nu poate sa aiba Materie
+
+E8
+
+a)Nu este relatie de agregare 
+b)Nu este relatie de Agregare
+c)Nu este superclasa
+e)Nu se face mostenire
+
+E9
+
+a)Carte nu extinde produs
+c)Este pus numele inaintea tipului
+d)NU este implementata metoda
+f)pret este un atribut
+h)Metoda nu este implementata in interfata
+
+E10
+
+a)Clasa Angajat nu e definita abstract
+c)Metoda calculPlata nu se poate defini intr-o clasa abstracta
+d)metoda calculPlata nu a fost declarata abstract
+
+E11
+
+b)Relatia dintre clase e invers
+c)calculPlata este o metoda si ii lipseste tipul
+
+E12
+
+a)Relatia este de asociere nu mostenire
+b)Atributul nu este static 
+f)Metoda nu e statica
+
+
+E13
+
+a)Clasa student nu defineste un agregat de tip Proiect
+b)Clasa Proiect nu defineste compozitii de tip Student
+d)Unde e compozitie e defapt agregare si unde e agregare e compozitie
